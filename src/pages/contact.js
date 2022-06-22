@@ -1,10 +1,12 @@
 import React from "react"
 import Layout from "../components/Layout"
 
-export default function Home() {
+const contact = () => {
   return (
     <Layout>
-      <h1>home </h1>
+      <h1>contact page</h1>
     </Layout>
   )
 }
+
+export default contact
