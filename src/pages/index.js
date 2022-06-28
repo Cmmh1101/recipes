@@ -2,7 +2,7 @@ import React from "react"
 import Layout from "../components/Layout"
 import { StaticImage } from "gatsby-plugin-image"
 import AllRecipes from "../components/AllRecipes"
-import TagsList from "../components/TagsList"
+// import TagsList from "../components/TagsList"
 import SEO from "../components/SEO"
 
 export default function Home() {
@@ -25,7 +25,7 @@ export default function Home() {
             </div>
           </div>
         </header>
-        <TagsList />
+        {/* <TagsList /> */}
         <AllRecipes />
       </main>
     </Layout>
