@@ -27,7 +27,7 @@ const Navbar = () => {
             Home
           </Link>
           <Link
-            to="/recipes"
+            to="/recipesPage"
             className="nav-link"
             activeClassName="active-link"
             onClick={() => setShow(false)}
@@ -35,7 +35,7 @@ const Navbar = () => {
             recipes
           </Link>
           <Link
-            to="/tags"
+            to="/tagsPage"
             className="nav-link"
             activeClassName="active-link"
             onClick={() => setShow(false)}
