@@ -20,8 +20,11 @@ export default function Home() {
           ></StaticImage>
           <div className="hero-container">
             <div className="hero-text">
-              <h1>Simply recipes</h1>
-              <h4>no fluff, just recipes</h4>
+              <h1>My Fave Recipes</h1>
+              <h4>
+                A collection of my family favorite recipes with a Venezuelan
+                Taste
+              </h4>
             </div>
           </div>
         </header>
