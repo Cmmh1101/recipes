@@ -1,4 +1,5 @@
 import React from "react"
+import { Disqus, CommentCount } from "gatsby-plugin-disqus"
 import Layout from "../components/Layout"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { BsClockHistory, BsClock, BsPeople } from "react-icons/bs"
@@ -8,6 +9,7 @@ import SEO from "../components/SEO"
 
 const RecipeTemplate = ({ data }) => {
   const {
+    id,
     title,
     cookTime,
     content,
@@ -18,6 +20,15 @@ const RecipeTemplate = ({ data }) => {
   } = data.contentfulRecipe
   const pathToImage = getImage(image)
   const { tags, instructions, ingredients, tools } = content
+  const slug = slugify(slugify(title, { lower: true }))
+
+  let disqusConfig = {
+    // url: `${config.siteUrl+location.pathname}`,
+    url: `https://www.myfaverecipes.live/${slug}`,
+    identifier: { id },
+    title: { title },
+  }
+
   return (
     <Layout>
       <SEO title={title} description={description} />
@@ -104,6 +115,10 @@ const RecipeTemplate = ({ data }) => {
               </div>
             </article>
           </section>
+          <section>
+            <CommentCount config={disqusConfig} placeholder="" />
+            <Disqus config={disqusConfig} />
+          </section>
         </div>
       </main>
     </Layout>
@@ -113,6 +128,7 @@ const RecipeTemplate = ({ data }) => {
 export const query = graphql`
   query getSingleRecipe($title: String) {
     contentfulRecipe(title: { eq: $title }) {
+      id
       title
       cookTime
       prepTime
