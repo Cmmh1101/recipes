@@ -41,6 +41,12 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-plugin-disqus`,
+      options: {
+        shortname: `myfaverecipes`,
+      },
+    },
+    {
       resolve: `gatsby-plugin-webfonts`,
       options: {
         fonts: {
