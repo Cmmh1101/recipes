@@ -1,3 +1,7 @@
+# Developed by: 
+
+- Carla Montano
+
 # Description: 
 
 My Fave Recipes projects is a passion project that I will be using to display and share my favorite Venezuelan Style recipes for others to learn more about cousine and try new delightful traditional Venezuelan and maybe some adapted dishes. 
@@ -13,6 +17,10 @@ This project is headless CMS project created using:
 - Contentful headless CMS
 - Styled Components
 - CSS
+
+## Project specifics: 
+
+Created from Hello world gatsby template and then modified to setup the projects based on it's needs. 
 
 
 <p align="center">
